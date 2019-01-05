@@ -3,7 +3,7 @@
 This is a README for the **computer vision section** of the Final project of ME495-ROS: **Baxter Plays Yahtzee**  
 
 Key ideas:
-* Get relative pose between table and Baxter by detecting a chessboard on table surface and then call PnP.
+* Get relative pose between table and Baxter by detecting a chessboard on table surface and then call PnP. After detecting dice in image, use geometry to solve the pos of dice on table.
 * Detect Dices based on using two graph-based image segmentation algorithms, and other image processing techniques.
 * Wrote a ROS node to provide the above services for the main program.
 
@@ -62,7 +62,7 @@ Functions for (3)(4)(5) are in [src/cv/lib_cv_calib.py](https://github.com/mschl
 
 # 2. Details about CV in this project
 
-## 2.1 Camera Calibration
+### 2.1 Camera Calibration
 
 We only used Baxter's left hand camera, whose camera info is already in its topic. 
 
